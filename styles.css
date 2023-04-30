@@ -1,0 +1,262 @@
+body,
+ul,
+li {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 254, 254);
+}
+
+header {
+    background-color: rgb(218, 245, 182);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer; 
+    padding: 12px 8px 12px 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: start;
+}
+
+tr:nth-child(odd){
+    background-color: #eee;
+}
+
+tr:hover {
+    background: rgb(200, 199, 199);
+}
+
+.banner {
+    height: 150px;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.banner img {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.linha {
+    height: 2px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+.divBorda {
+    border: 1px solid #d2d2d2;
+    height:auto;
+    width: 95%;
+    border-radius:8px 0 8px;    
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo {
+    width: 100%;
+    color: rgb(247, 54, 54);
+    display: inline-block;
+    text-align: center;
+    top: 15px;
+}
+
+.space {
+    margin-top: 100px;
+    height: 5px;
+    width: 100%;
+}
+
+.space_rodap {
+    height: 5px;
+    width: 100%;
+}
+
+.divTotal {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.grdResult {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.tblResult {
+    background-color: white;
+    width: 95%;
+}
+
+.tblTotal {
+    width:338px;
+    float: right;
+}
+
+.tbltitulo {
+    width:192px;
+}
+
+.tblvalor {
+    width:144px;
+    background-color: #2ab53a;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.boxDescricao {
+    margin: 0;
+    border: 1px solid rgb(35, 32, 24);
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.boxData {
+    margin: 0;
+    border: 1px solid rgb(35, 32, 24);
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.boxValor {
+    margin: 0;
+    border: 1px solid rgb(35, 32, 24);
+    width: 8%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btnAdicionar {
+    padding: 9px 10px;
+    background-color: rgb(35, 32, 24);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.btnAdicionar:hover {
+    background-color: #2ab53a;
+    color: white;
+}
+
+.corTR {
+    background-color:honeydew;
+    width: 95%;
+}
+
+.corTD {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.grdItem {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.closeReceita:hover {
+    color: #f44336;
+    font-weight: bolder;
+}
+
+.closeDespesa:hover {
+    color: #f44336;
+    font-weight: bolder;
+}
+
+.checkStatus {
+    margin-left:20px;
+}
+
+.tblItem {
+    background-color: white;
+    width: 95%;
+}
+
+.tblItem0 {
+    width: 4%;
+}
+
+.tblItem1 {
+    width: 4%;
+}
+
+.tblItem2 {
+    width: 65%;
+}
+
+.tblItem3 {
+    width: 15%;
+}
+
+.tblItem4 {
+    width: 10%;
+}
+
+.tblItem5 {
+    width: 2%;
+}
+
+.tblResult1 {
+    width: 4%;
+}
+
+.tblResult2 {
+    width: 14%;
+}
+
+.tblResult3 {
+    width: 14%;
+}
+
+.tblResult4 {
+    width: 19%;
+}
+
+.tblResult5 {
+    width: 19%;
+}
+
+.tblResult6 {
+    width: 19%;
+}
+
+.tblResult7 {
+    width: 6%;
+}
+
+
+
