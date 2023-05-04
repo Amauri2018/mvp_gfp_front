@@ -184,19 +184,19 @@
       const id = Element.getElementsByTagName('td')[0].innerHTML;
       
       if (confirm("Você tem certeza?")) {
+        deleteRowsLista('receita');
+        deleteRowsLista('despesa');
+  
         deleteItemProcessar(id); 
         alert("Removido!"); 
        
         atualizaDespesaAberto(id);
         atualizaReceitaAberto(id);
 
-        deleteRowsLista('receita');
-        deleteRowsLista('despesa');
-
         buscaPeriodo();
 
-        getBuscaListaReceita();
-        getBuscaListaDespesa();
+        setTimeout(getBuscaListaReceita(), 3000);
+        setTimeout(getBuscaListaDespesa(), 3000);
         
       }
     }
@@ -224,8 +224,8 @@
       tdesp = Element.getElementsByTagName('td')[4].innerHTML.replace("R$&nbsp;","").replace(".","").replace(",",".");
       tcaixa = Element.getElementsByTagName('td')[5].innerHTML.replace("R$&nbsp;","").replace(".","").replace(",",".");
       
-      buscaPeriodoReceita(inputDataInicio, inputDataFim, id);
-      buscaPeriodoDespesa(inputDataInicio, inputDataFim, id);
+      setTimeout(buscaPeriodoReceita(inputDataInicio, inputDataFim, id), 3000);
+      setTimeout(buscaPeriodoDespesa(inputDataInicio, inputDataFim, id), 3000);
     }
   }
 
@@ -302,17 +302,17 @@
         body: formData
       })
       .then((response) => response.json())
-      .then((data) => {
+      .then((data) => {   
         
-        atualizaIDProcReceita(data.id, inputDataInicio, inputDataFim)
-        atualizaIDProcDespesa(data.id, inputDataInicio, inputDataFim)
-        getBuscaListaProcessado(inputDataInicio, inputDataFim);
-
         deleteRowsLista('receita');
         deleteRowsLista('despesa');
 
-        getBuscaListaReceita();
-        getBuscaListaDespesa();
+        atualizaIDProcReceita(data.id, inputDataInicio, inputDataFim)
+        atualizaIDProcDespesa(data.id, inputDataInicio, inputDataFim)
+        getBuscaListaProcessado(inputDataInicio, inputDataFim);  
+
+        setTimeout(getBuscaListaReceita(), 3000)
+        setTimeout(getBuscaListaDespesa(), 3000)
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -401,6 +401,7 @@
     } else {
       postAddItemReceita(inputDescricao, inputData, inputValor);
       alert("Item adicionado com sucesso!");
+      
       deleteRowsLista('receita');
       getBuscaListaReceita();
     }
